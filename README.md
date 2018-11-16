@@ -67,6 +67,7 @@ Repository for creating CSUSB's Car Hacking and V2V environment Distribution
 	```
 
 ## Setting up the Arduino Canbus Shield v2
+1. Install Arduino IDE on Linux (https://www.arduino.cc/en/Guide/Linux)
 
 ## Setting up the BladeRF A9
     * Clone this repository (https://github.com/Nuand/bladeRF.git)
