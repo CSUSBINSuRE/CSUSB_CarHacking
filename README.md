@@ -37,12 +37,16 @@ Repository for creating CSUSB's Car Hacking and V2V environment Distribution
 	```
 3. Open Unified Diagnostic Services Simulator (UDSim)
 	* Go to udsim under the Automotive tools in Applications
+	* Using the SocketCAN tools travel to the src folder and enter the following command to compile:
 	```
 	$ sudo make 
 	```
-	* Run UDSim
+	* Run UDSim from withing the src folder
 	```
 	$ ./udsim vcan0
+	```
+	* Install socketcand in a suitable folder (home directory recommended alongside ICSim)
+	```
 	$ sudo git clone https://github.com/dschanoeh/socketcand.git
 	```
 4. Setup virtual can interface
