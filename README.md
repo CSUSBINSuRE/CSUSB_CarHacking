@@ -16,17 +16,20 @@ Temporary Repository for creating CSUSB's Car Hacking and V2V environment Distri
     * Connect your ISO by choosing the Virtual Optical Disk File under Controller: IDE
 
 ## Initial Set-up of VM
-	1. Install the OS in the VM	(https://www.tecmint.com/parrot-security-os-penetration-testing-hacking-and-anonymity/)
+	1. Install Parrot OS in the VM (https://www.tecmint.com/parrot-security-os-penetration-testing-hacking-and-anonymity/)
 	2. Install ICSim
-    ```
-    $ sudo apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev
-    ```
+		```
+		$ sudo apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev
+		$ sudo git clone https://github.com/zombieCraig/ICSim
+		$ ./icsim vcan0
+		$ ./controls vcan0
+		```
 	3. Open UDSim
 		* Go to udsim under the Automotive tools in Applications
 		```
 		$ sudo make 
 		```
-    * Run UDSim
+		* Run UDSim
 		```
 		$ ./udsim vcan0
 		$ sudo git clone https://github.com/dschanoeh/socketcand.git
@@ -40,17 +43,17 @@ Temporary Repository for creating CSUSB's Car Hacking and V2V environment Distri
     ```
     
 ## Installing PyBOMBS
-		```
-    $ pip install --upgrade git+https://github.com/gnuradio/pybombs.git
-    $ pybombs auto-config
-    $ pybombs recipes add-defaults
-    $ export PATH=$PATH:$HOME/.local/bin
-    $ mkdir ~/pybombs/
-    $ pybombs prefix init pybombs/bladeRF -a bladeRF -R gnuradio-default
-    $ pybombs -p bladeRF install bladeRF gr-iqbal gr-osmosdr gqrx
-    $ pybombs -p bladeRF run bladeRF-cli -- -i
-    $ pybombs -p bladeRF run gqrx
-    ```
+	```
+	$ pip install --upgrade git+https://github.com/gnuradio/pybombs.git
+	$ pybombs auto-config
+	$ pybombs recipes add-defaults
+	$ export PATH=$PATH:$HOME/.local/bin
+	$ mkdir ~/pybombs/
+	$ pybombs prefix init pybombs/bladeRF -a bladeRF -R gnuradio-default
+	$ pybombs -p bladeRF install bladeRF gr-iqbal gr-osmosdr gqrx
+	$ pybombs -p bladeRF run bladeRF-cli -- -i
+	$ pybombs -p bladeRF run gqrx
+	```
 
 ##	Setting up the BladeRF A9
     * Clone this repository (https://github.com/Nuand/bladeRF.git)
