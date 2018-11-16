@@ -20,7 +20,7 @@ Repository for creating CSUSB's Car Hacking and V2V environment Distribution
 2. Install Instrument Cluster Simulator (ICSim)
 	```
 	$ sudo apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev
-	$ sudo git clone https://github.com/zombieCraig/ICSim
+	$ sudo git clone https://github.com/zombieCraig/ICSim.git
 	```
 3. Open ICSim
 	* The following commands set up a virtual can interface
