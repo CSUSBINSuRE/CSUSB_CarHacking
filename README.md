@@ -51,7 +51,7 @@ Repository for creating CSUSB's Car Hacking and V2V environment Distribution
 		$ sudo modprobe vcan
 		$ sudo ip link add dev vcan0 type vcan
     		$ sudo ip link set up vcan0
-    ```
+    		```
     
 ## Installing PyBOMBS
 	```
@@ -66,7 +66,7 @@ Repository for creating CSUSB's Car Hacking and V2V environment Distribution
 	$ pybombs -p bladeRF run gqrx
 	```
 
-##	Setting up the BladeRF A9
+## Setting up the BladeRF A9
     * Clone this repository (https://github.com/Nuand/bladeRF.git)
     * Fetch the latest pre-built bladeRF FPGA image. See the README.md in the hdl directory for more information. Google bladeRF FPGA for image.
     * Fetch the latest pre-built bladeRF firmware image. See the README.md in the fx3_firmware directory for more information.
