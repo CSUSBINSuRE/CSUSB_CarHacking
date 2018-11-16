@@ -68,6 +68,11 @@ Repository for creating CSUSB's Car Hacking and V2V environment Distribution
 
 ## Setting up the Arduino Canbus Shield v2
 1. Install Arduino IDE on Linux (https://www.arduino.cc/en/Guide/Linux)
+2. Install CAN-BUS Shield V2 libraries
+	* Travel to the library folder within extracted Arduino download file
+	```
+	$ sudo git clone https://github.com/Seeed-Studio/CAN_BUS_Shield.git
+	```
 
 ## Setting up the BladeRF A9
     * Clone this repository (https://github.com/Nuand/bladeRF.git)
