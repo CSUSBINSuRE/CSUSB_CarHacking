@@ -2,18 +2,18 @@
 Repository for creating CSUSB's Car Hacking and V2V environment Distribution
 
 ## Installing the VM Distribution through Virtualbox
-	1. Create new Virtual Machine
-		* Type: Linux
-		* Version: Debian (32 or 64-bit depending on ISO file, 64-bit recommended)
-		* RAM: 2 GB (minimum)/ 4-8 GB (recommended)
-		* Hard disk file type: VDI
-		* Hard disk file expanding: Dynamically allocated
-		* Storage: 40-50 GB (minimum)/ 64 (recommended)
-	2. Connect the ISO file
-		* Right-click VM instance
-		* Choose settings
-		* Enter storage sub-menu
-		* Connect your ISO by choosing the Virtual Optical Disk File under Controller: IDE
+1. Create new Virtual Machine
+	* Type: Linux
+	* Version: Debian (32 or 64-bit depending on ISO file, 64-bit recommended)
+	* RAM: 2 GB (minimum)/ 4-8 GB (recommended)
+	* Hard disk file type: VDI
+	* Hard disk file expanding: Dynamically allocated
+	* Storage: 40-50 GB (minimum)/ 64 (recommended)
+2. Connect the ISO file
+	* Right-click VM instance
+	* Choose settings
+	* Enter storage sub-menu
+	* Connect your ISO by choosing the Virtual Optical Disk File under Controller: IDE
 
 ## Initial Set-up of VM
 	1. Install Parrot OS in the VM (https://www.tecmint.com/parrot-security-os-penetration-testing-hacking-and-anonymity/)
