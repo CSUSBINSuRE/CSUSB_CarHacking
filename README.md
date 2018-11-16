@@ -66,7 +66,7 @@ Repository for creating CSUSB's Car Hacking and V2V environment Distribution
 	$ pybombs -p bladeRF run gqrx
 	```
 
-## Setting up the Arduino Canbus Shiel v2
+## Setting up the Arduino Canbus Shield v2
 
 ## Setting up the BladeRF A9
     * Clone this repository (https://github.com/Nuand/bladeRF.git)
