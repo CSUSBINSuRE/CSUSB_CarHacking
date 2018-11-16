@@ -4,7 +4,7 @@ Temporary Repository for creating CSUSB's Car Hacking and V2V environment Distri
 ## Installing the VM Distribution through Virtualbox
 	1. Create new Virtual Machine
 		* Type: Linux
-		* Version: Debian
+		* Version: Debian (32 or 64-bit depending on ISO file, 64-bit recommended)
 		* RAM: 2 GB (minimum)/ 4-8 GB (recommended)
 		* Hard disk file type: VDI
 		* Hard disk file expanding: Dynamically allocated
@@ -21,6 +21,13 @@ Temporary Repository for creating CSUSB's Car Hacking and V2V environment Distri
 		```
 		$ sudo apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev
 		$ sudo git clone https://github.com/zombieCraig/ICSim
+		```
+	3. Open ICSim
+ 		```
+		$ sudo modprobe can
+ 		$ sudo modprobe vcan
+ 		$ sudo ip link add dev vcan0 type vcan
+		$ sudo ip link set up vcan0
 		$ ./icsim vcan0
 		$ ./controls vcan0
 		```
