@@ -16,42 +16,42 @@ Repository for creating CSUSB's Car Hacking and V2V environment Distribution
 	* Connect your ISO by choosing the Virtual Optical Disk File under Controller: IDE
 
 ## Initial Set-up of VM
-	1. Install Parrot OS in the VM (https://www.tecmint.com/parrot-security-os-penetration-testing-hacking-and-anonymity/)
-	2. Install Instrument Cluster Simulator (ICSim)
-		```
-		$ sudo apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev
-		$ sudo git clone https://github.com/zombieCraig/ICSim
-		```
-	3. Open ICSim
-		* The following commands set up a virtual can interface
-		```
-		$ sudo modprobe can
- 		$ sudo modprobe vcan
- 		$ sudo ip link add dev vcan0 type vcan
-		$ sudo ip link set up vcan0
-		```
-		* The following commands start the ICSim and the controls
-		```
-		$ ./icsim vcan0
-		$ ./controls vcan0
-		```
-	3. Open Unified Diagnostic Services Simulator (UDSim)
-		* Go to udsim under the Automotive tools in Applications
-		```
-		$ sudo make 
-		```
-		* Run UDSim
-		```
-		$ ./udsim vcan0
-		$ sudo git clone https://github.com/dschanoeh/socketcand.git
-		```
-	4. Setup virtual can interface
-		```
-		$ sudo modprobe can
-		$ sudo modprobe vcan
-		$ sudo ip link add dev vcan0 type vcan
-    		$ sudo ip link set up vcan0
-    		```
+1. Install Parrot OS in the VM (https://www.tecmint.com/parrot-security-os-penetration-testing-hacking-and-anonymity/)
+2. Install Instrument Cluster Simulator (ICSim)
+	```
+	$ sudo apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev
+	$ sudo git clone https://github.com/zombieCraig/ICSim
+	```
+3. Open ICSim
+	* The following commands set up a virtual can interface
+	```
+	$ sudo modprobe can
+	$ sudo modprobe vcan
+	$ sudo ip link add dev vcan0 type vcan
+	$ sudo ip link set up vcan0
+	```
+	* The following commands start the ICSim and the controls
+	```
+	$ ./icsim vcan0
+	$ ./controls vcan0
+	```
+3. Open Unified Diagnostic Services Simulator (UDSim)
+	* Go to udsim under the Automotive tools in Applications
+	```
+	$ sudo make 
+	```
+	* Run UDSim
+	```
+	$ ./udsim vcan0
+	$ sudo git clone https://github.com/dschanoeh/socketcand.git
+	```
+4. Setup virtual can interface
+	```
+	$ sudo modprobe can
+	$ sudo modprobe vcan
+	$ sudo ip link add dev vcan0 type vcan
+	$ sudo ip link set up vcan0
+	```
     
 ## Installing PyBOMBS
 	```
