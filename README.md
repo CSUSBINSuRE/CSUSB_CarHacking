@@ -13,7 +13,7 @@ Repository for creating CSUSB's Car Hacking and V2V environment Distribution
 		* Right-click VM instance
 		* Choose settings
 		* Enter storage sub-menu
-    		* Connect your ISO by choosing the Virtual Optical Disk File under Controller: IDE
+		* Connect your ISO by choosing the Virtual Optical Disk File under Controller: IDE
 
 ## Initial Set-up of VM
 	1. Install Parrot OS in the VM (https://www.tecmint.com/parrot-security-os-penetration-testing-hacking-and-anonymity/)
