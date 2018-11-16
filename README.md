@@ -23,12 +23,15 @@ Repository for creating CSUSB's Car Hacking and V2V environment Distribution
 		$ sudo git clone https://github.com/zombieCraig/ICSim
 		```
 	3. Open ICSim
- 		```
+		* The following commands set up a virtual can interface
+		```
 		$ sudo modprobe can
  		$ sudo modprobe vcan
  		$ sudo ip link add dev vcan0 type vcan
 		$ sudo ip link set up vcan0
-		* The following commands starts the ICSim and the controls
+		```
+		* The following commands start the ICSim and the controls
+		```
 		$ ./icsim vcan0
 		$ ./controls vcan0
 		```
