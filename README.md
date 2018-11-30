@@ -72,9 +72,9 @@ Repository for creating CSUSB's Car Hacking and V2V environment Distribution
 	```
 
 ## Setting up the BladeRF A9
-    * Clone this repository (https://github.com/Nuand/bladeRF.git)
-    * Fetch the latest pre-built bladeRF FPGA image. See the README.md in the hdl directory for more information. Google bladeRF FPGA for image.
-    * Fetch the latest pre-built bladeRF firmware image. See the README.md in the fx3_firmware directory for more information.
+1. Clone this repository (https://github.com/Nuand/bladeRF.git)
+2. Fetch the latest pre-built bladeRF FPGA image. See the README.md in the hdl directory for more information. Google bladeRF FPGA for image.
+3. Fetch the latest pre-built bladeRF firmware image. See the README.md in the fx3_firmware directory for more information.
     ```
     $ mkdir build
     $ cd build
