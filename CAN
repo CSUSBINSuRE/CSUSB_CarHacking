@@ -1,0 +1,3 @@
+cd scripts
+sudo gnome-terminal -- python3 CAN.py
+
