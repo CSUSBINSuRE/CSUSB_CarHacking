@@ -11,6 +11,7 @@ or the VCAN.py is not in the scripts folder on the desktop it will not work.
 This script should be located in a folder called scripts on the Desktop.
 This script runs all aspects of the virtual environment from one location.
 cansniffer
+candump
 ICSim Controls
 ICSim
 UDSim
@@ -29,6 +30,7 @@ or the CAN.py is not in the scripts folder on the desktop it will not work.
 This script should be located in a folder called scripts on the Desktop.
 This script runs the necessary programs when connected to a vehicle.
 cansniffer
+candump
 Wireshark
 This script has the option to change the bitrate of a vehicle.
 The default bitrate is 500,000
@@ -38,4 +40,7 @@ This is for future builds.
 This script will open and execute these programs.
 However, this script does not save any captured data. So be sure to save before exiting.
 ---------------------------------------------------
-
+--Save logs--
+The Save logs script moves all of the logs taken by candump (if you used the above scripts)
+to the Logs folder on the desktop from the can-utils program folder.
+---------------------------------------------------
