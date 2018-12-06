@@ -19,13 +19,13 @@ Repository for creating CSUSB's Car Hacking and V2V environment distribution
 ## Initial Set-up of VM
 1. Install Parrot OS in the VM (https://www.tecmint.com/parrot-security-os-penetration-testing-hacking-and-anonymity/)
 2. Install Instrument Cluster Simulator (ICSim)
-Note: Make sure to take note of which directory you are in since it will install wherever you enter the commands
+* Note: Make sure to take note of which directory you are in since it will install wherever you enter the commands
 	```
 	$ sudo apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev
 	$ sudo git clone https://github.com/zombieCraig/ICSim.git
 	```
 3. Open ICSim
-Note: Make sure you are in the ICSim directory before running these commands
+* Note: Make sure you are in the ICSim directory before running these commands
 	* The following commands set up a virtual can interface
 	```
 	$ sudo modprobe can
@@ -50,7 +50,7 @@ Note: Make sure you are in the ICSim directory before running these commands
 	$ ./udsim vcan0
 	```
 4. Install socketcand
-Note: Install in a suitable folder (home directory recommended alongside ICSim)
+* Note: Install in a suitable folder (home directory recommended alongside ICSim)
 	```
 	$ sudo git clone https://github.com/dschanoeh/socketcand.git
 	```
