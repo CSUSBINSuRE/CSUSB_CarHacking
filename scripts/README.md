@@ -1,4 +1,4 @@
-READ ME
+READ ME for Scripts
 --------------------------------------------------
 --VCAN --
 The VCAN bash script is an executable to run the VCAN.py python3 script as root.
@@ -38,4 +38,3 @@ This is for future builds.
 This script will open and execute these programs.
 However, this script does not save any captured data. So be sure to save before exiting.
 ---------------------------------------------------
-
