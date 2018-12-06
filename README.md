@@ -1,5 +1,5 @@
 # CSUSB_CarHacking
-Repository for creating CSUSB's Car Hacking and V2V environment Distribution
+Repository for creating CSUSB's Car Hacking and V2V environment distribution
 
 ## Installing the VM Distribution through Virtualbox
 1. Create new Virtual Machine
