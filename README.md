@@ -9,6 +9,7 @@ Repository for creating CSUSB's Car Hacking and V2V environment Distribution
 	* Hard disk file type: VDI
 	* Hard disk file expanding: Dynamically allocated
 	* Storage: 40-50 GB (minimum)/ 64 (recommended)
+		Note: If interested in utilizing SDR, have at least 70-80 GB
 2. Connect the ISO file
 	* Right-click VM instance
 	* Choose settings
