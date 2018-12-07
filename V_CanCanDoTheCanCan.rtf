@@ -1,0 +1,190 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 Menlo-Italic;\f1\fnil\fcharset0 Menlo-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red109\green109\blue109;\red0\green0\blue109;\red0\green0\blue254;
+\red14\green110\blue109;}
+{\*\expandedcolortbl;;\csgenericrgb\c42745\c42745\c42745;\csgenericrgb\c0\c0\c42745;\csgenericrgb\c0\c0\c99608;
+\csgenericrgb\c5490\c43137\c42745;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\i\fs24 \cf2 # CAN / Virtual CAN\
+
+\f1\i0\b \cf3 import 
+\f2\b0 \cf0 os\
+
+\f1\b \cf3 import 
+\f2\b0 \cf0 subprocess\
+\
+
+\f0\i \cf2 # importing system processes so we can call the terminal\
+
+\f2\i0 \cf0 done = 
+\f1\b \cf3 False\
+
+\f0\i\b0 \cf2 # bitrate = input('Please enter the bitrate of the vehicle ')\
+
+\f2\i0 \cf0 bitrate = \cf3 str\cf0 (\cf4 500000\cf0 )\
+\
+\
+
+\f0\i \cf2 #Main Program\
+
+\f1\i0\b \cf3 def 
+\f2\b0 \cf0 main():\
+    choice = 
+\f1\b \cf5 ""\
+    \cf3 while 
+\f2\b0 \cf0 choice != 
+\f1\b \cf5 "quit"
+\f2\b0 \cf0 :\
+        \cf3 print\cf0 (
+\f1\b \cf5 "Hello! Welcome to CSUSB Insure "\
+              "\cf3 \\n\cf5  Press 1 to Open Cansniffer"\
+              "\cf3 \\n\cf5  Press 2 to OPen ICSim Controls"\
+              "\cf3 \\n\cf5  Press 3 to Open ICSimulator"\
+              "\cf3 \\n\cf5  Press 4 to Open UDSimulator"\
+              "\cf3 \\n\cf5  Press 5 to Perform CanDump"\
+              "\cf3 \\n\cf5  Press 6 to Open All Above Programs"\
+              "\cf3 \\n\cf5  Press 7 to start capture with WIRESHARK"\
+              "\cf3 \\n\cf5  Press 8 to Change default bitrate"\
+              "\cf3 \\n\cf5  Or type 'quit' to quit."
+\f2\b0 \cf0 )\
+        choice = \cf3 input\cf0 (
+\f1\b \cf5 "Enter an option: "
+\f2\b0 \cf0 )\
+\
+        
+\f1\b \cf3 if 
+\f2\b0 \cf0 choice == 
+\f1\b \cf5 "1"
+\f2\b0 \cf0 :\
+            os.system(
+\f1\b \cf5 "gnome-terminal -- cansniffer -c vcan0"
+\f2\b0 \cf0 )   
+\f0\i \cf2 # opening cansniffer in new terminal\
+            
+\f2\i0 \cf0 os.system(
+\f1\b \cf5 "clear"
+\f2\b0 \cf0 )                                   
+\f0\i \cf2 # cleans up the terminal\
+\
+        
+\f1\i0\b \cf3 elif 
+\f2\b0 \cf0 choice == 
+\f1\b \cf5 "2"
+\f2\b0 \cf0 :\
+            os.system(
+\f1\b \cf5 "gnome-terminal --working-directory='/home/parrot/ICSim' -- ./controls vcan0"
+\f2\b0 \cf0 )   
+\f0\i \cf2 # opening controls from ICSim directory\
+            
+\f2\i0 \cf0 os.system(
+\f1\b \cf5 "clear"
+\f2\b0 \cf0 )\
+\
+        
+\f1\b \cf3 elif 
+\f2\b0 \cf0 choice == 
+\f1\b \cf5 "3"
+\f2\b0 \cf0 :\
+            os.system(
+\f1\b \cf5 "gnome-terminal --working-directory='/home/parrot/ICSim' -- ./icsim vcan0"
+\f2\b0 \cf0 )      
+\f0\i \cf2 # opening ICSim from ICSim directory\
+            
+\f2\i0 \cf0 os.system(
+\f1\b \cf5 "clear"
+\f2\b0 \cf0 )\
+\
+        
+\f1\b \cf3 elif 
+\f2\b0 \cf0 choice == 
+\f1\b \cf5 "4"
+\f2\b0 \cf0 :\
+            os.system(
+\f1\b \cf5 "gnome-terminal --working-directory='/opt/car-hacking/UDSim/src' -- ./udsim vcan0"
+\f2\b0 \cf0 ) 
+\f0\i \cf2 # opening UDsim\
+            
+\f2\i0 \cf0 os.system(
+\f1\b \cf5 "clear"
+\f2\b0 \cf0 )\
+\
+        
+\f1\b \cf3 elif 
+\f2\b0 \cf0 choice == 
+\f1\b \cf5 "5"
+\f2\b0 \cf0 :\
+            
+\f0\i \cf2 # os.system("gnome-terminal --working-directory='/home/parrot/can-utils' -- ./candump vcan0")\
+            
+\f2\i0 \cf0 os.system(
+\f1\b \cf5 "clear"
+\f2\b0 \cf0 )\
+\
+        
+\f1\b \cf3 elif 
+\f2\b0 \cf0 choice == 
+\f1\b \cf5 "6"
+\f2\b0 \cf0 :     
+\f0\i \cf2 # open all\
+            
+\f2\i0 \cf0 os.system(
+\f1\b \cf5 "gnome-terminal -- cansniffer -c vcan0"
+\f2\b0 \cf0 )\
+            os.system(
+\f1\b \cf5 "gnome-terminal --working-directory='/home/parrot/ICSim' -- ./controls vcan0"
+\f2\b0 \cf0 )\
+            os.system(
+\f1\b \cf5 "gnome-terminal --working-directory='/home/parrot/ICSim' -- ./icsim vcan0"
+\f2\b0 \cf0 )\
+            os.system(
+\f1\b \cf5 "gnome-terminal --working-directory='/opt/car-hacking/UDSim/src' -- ./udsim vcan0"
+\f2\b0 \cf0 )\
+            
+\f0\i \cf2 # os.system("gnome-terminal --working-directory='/home/parrot/can-utils' -- ./candump vcan0")\
+            
+\f2\i0 \cf0 os.system(
+\f1\b \cf5 "clear"
+\f2\b0 \cf0 )\
+\
+        
+\f1\b \cf3 elif 
+\f2\b0 \cf0 choice == 
+\f1\b \cf5 "7"
+\f2\b0 \cf0 :\
+            os.system(
+\f1\b \cf5 "wireshark -i vcan0 -k"
+\f2\b0 \cf0 )\
+            
+\f0\i \cf2 # Starting wireshark and immediately start capturing via vcan0 (can change wear it is capturing)\
+            
+\f2\i0 \cf0 os.system(
+\f1\b \cf5 "clear"
+\f2\b0 \cf0 )\
+\
+        
+\f1\b \cf3 elif 
+\f2\b0 \cf0 choice == 
+\f1\b \cf5 "8"
+\f2\b0 \cf0 :\
+            \cf2 bitrate \cf0 = \cf3 input\cf0 (
+\f1\b \cf5 'What would you like to set the bitrate to: '
+\f2\b0 \cf0 )\
+            os.system(
+\f1\b \cf5 "clear"
+\f2\b0 \cf0 )\
+\
+        
+\f1\b \cf3 else
+\f2\b0 \cf0 :\
+            os.system(
+\f1\b \cf5 "clear"
+\f2\b0 \cf0 )\
+            \cf3 print\cf0 (
+\f1\b \cf5 'Sorry, That was not one of the options, Please be sure to read through the options available'
+\f2\b0 \cf0 )\
+\
+main()\
+}
