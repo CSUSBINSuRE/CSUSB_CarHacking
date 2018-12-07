@@ -15,6 +15,30 @@ Repository for creating CSUSB's Car Hacking and V2V environment distribution
 	* Choose settings
 	* Enter storage sub-menu
 	* Connect your ISO by choosing the Virtual Optical Disk File under Controller: IDE
+	
+## Installing the VM Distribution through VMware
+1. Create new Virtual Machine
+	* Add a new machine
+	* Drag Security Parrot ISO into appropriate box
+	* Choose operating system as follows: Linux and then Debian 7.x 64 bit
+	* Choose boot firmware as follows: UEFI
+	* Click finish
+	* Name it Parrot Security and save it
+
+2. Once it loads in the vm, and you see parrot security scroll down and click on install
+	* Then go through the process, pick appropriate language and region
+	* Create a username and password
+	* Choose time zone
+	* Partitioning method: Guided – use entire disk
+	* Select disk to partition: SCSI3 (0,0,0) (sda) – 21.5gb VMware, vmware virtuals
+	* Selected for partitioning: Partitioning scheme – All files in one partition (recommended)
+	* Do you want to return to the partitioning menu? Select NO
+	* Write changes to disks? YES
+	* Install the GRUB boot loader to the master boot record? YES
+	* Device for boot loader install? /dev/sda
+	* Install complete, press enter
+	* Once completed, another pop up will come up. Pick appropriate languages
+	* Check for updates? Yes, and install
 
 ## Initial Set-up of VM
 1. Install Parrot OS in the VM (https://www.tecmint.com/parrot-security-os-penetration-testing-hacking-and-anonymity/)
