@@ -1,6 +1,6 @@
 # READ ME for Scripts
---------------------------------------------------
---VCAN --
+
+## VCAN 
 The VCAN bash script is an executable to run the VCAN.py python3 script as root.
 This script navagates to the scripts folder on the desktop and runs the VCAN.py.
 This script needs to be located on the Desktop since the script changes directories from there.
@@ -17,7 +17,8 @@ Wireshark
 This script will open and execute all of these programs.
 However, this script does not save any captured data. So be sure to save before exiting.
 --------------------------------------------------
---CAN--
+
+## CAN
 The CAN bash script is an executable to run the CAN.py python3 script as root.
 This script navagates to the scripts folder on the desktop and runs the CAN.py.
 This script needs to be located on the Desktop since the script changes directories from there.
