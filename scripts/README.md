@@ -1,13 +1,15 @@
 # READ ME for Scripts
 
 ## VCAN 
+```
 The VCAN bash script is an executable to run the VCAN.py python3 script as root.
 This script navagates to the scripts folder on the desktop and runs the VCAN.py.
 This script needs to be located on the Desktop since the script changes directories from there.
 If this script is not on the Desktop OR the VCAN.py is not in the scripts folder on the desktop it will not work.
---------------------------------------------------
+```
 
 ### VCAN.py
+```
 This script should be located in a folder called scripts on the Desktop.
 This script runs all aspects of the virtual environment from one location.
 cansniffer
@@ -17,7 +19,7 @@ UDSim
 Wireshark
 This script will open and execute all of these programs.
 However, this script does not save any captured data. So be sure to save before exiting.
---------------------------------------------------
+```
 
 ## CAN
 The CAN bash script is an executable to run the CAN.py python3 script as root.
