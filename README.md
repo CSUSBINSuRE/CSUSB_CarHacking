@@ -86,10 +86,10 @@ Repository for creating CSUSB's Car Hacking and V2V environment distribution
     $ cmake -DFX3_INSTALL_PATH=/opt/cypress/fx3_sdk -DCMAKE_TOOLCHAIN_FILE=../cmake/fx3-toolchain.cmake ../
     $ make
     ```
-    * Follow the instructions in the host directory to build and install libbladeRF and the bladeRF-cli utility.
-    * Attach the bladeRF board to your fastest USB port.
-    * You should now be able to see your device in the list output via bladeRF-cli -p
-    * You can view additional information about the device via bladeRF-cli -e info -e version.
-    * If any warnings indicate that a firmware update is needed, run:bladeRF-cli -f <firmware_file>.
-      ○	If you ever find the device booting into the FX3 bootloader (e.g., if you unplug the device in the middle of a firmware upgrade), see the recovery command in bladeRF-cli for additional details.
-    * See the overview of the bladeRF-cli for more information about loading the FPGA and using the command line interface tool
+4. Follow the instructions in the host directory to build and install libbladeRF and the bladeRF-cli utility.
+5. Attach the bladeRF board to your fastest USB port.
+6. You should now be able to see your device in the list output via bladeRF-cli -p
+7. You can view additional information about the device via bladeRF-cli -e info -e version.
+8. If any warnings indicate that a firmware update is needed, run:bladeRF-cli -f <firmware_file>.
+	* If you ever find the device booting into the FX3 bootloader (e.g., if you unplug the device in the middle of a firmware upgrade), see the recovery command in bladeRF-cli for additional details.
+9. See the overview of the bladeRF-cli for more information about loading the FPGA and using the command line interface tool
