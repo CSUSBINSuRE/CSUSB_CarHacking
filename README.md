@@ -33,8 +33,8 @@ Repository for creating CSUSB's Car Hacking and V2V environment distribution
 	$ sudo ip link add dev vcan0 type vcan
 	$ sudo ip link set up vcan0
 	```
+* Note: Run the two commands together with " & " in-between them
 	* The following commands start the ICSim and the controls
-	Note: Run the two commands together with " & " in-between them
 	```
 	$ ./icsim vcan0
 	$ ./controls vcan0
