@@ -6,7 +6,8 @@ This script navagates to the scripts folder on the desktop and runs the VCAN.py.
 This script needs to be located on the Desktop since the script changes directories from there.
 If this script is not on the Desktop OR the VCAN.py is not in the scripts folder on the desktop it will not work.
 --------------------------------------------------
---VCAN.py--
+
+### VCAN.py
 This script should be located in a folder called scripts on the Desktop.
 This script runs all aspects of the virtual environment from one location.
 cansniffer
@@ -24,7 +25,8 @@ This script navagates to the scripts folder on the desktop and runs the CAN.py.
 This script needs to be located on the Desktop since the script changes directories from there.
 If this script is not on the Desktop OR the CAN.py is not in the scripts folder on the desktop it will not work.
 --------------------------------------------------
---CAN.py--
+
+### CAN.py
 This script should be located in a folder called scripts on the Desktop.
 This script runs the necessary programs when connected to a vehicle.
 cansniffer
