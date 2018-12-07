@@ -26,8 +26,8 @@ This script runs and executes the main menu of all aspects of the virtual enviro
 * ICSim
 * UDSim
 * Wireshark
-> This script will open and execute all of these programs
-> Be sure to save before exiting
+> This script will open and execute all of these programs.
+> Be sure to save before exiting.
 
 
 ## CAN
