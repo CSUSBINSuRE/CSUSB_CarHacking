@@ -1,4 +1,4 @@
-# READ ME for Scripts
+# README for Scripts
 
 ## VCAN 
 The VCAN bash script is an executable to run the VCAN.py python3 script as root.
