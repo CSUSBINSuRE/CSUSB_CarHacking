@@ -111,7 +111,8 @@ void MainWindow::AnimateDataOne(){
         instrumentClusterScene->addItem(endRedOne);
         isWhite = false;
         isRed = true;
-    }else if(isRed){
+    }
+    else if(isRed){
         instrumentClusterScene->removeItem(dataTextOneC);
         instrumentClusterScene->removeItem(dataTextOneRed);
         instrumentClusterScene->removeItem(endRedOne);
@@ -134,7 +135,8 @@ void MainWindow::AnimateDataTwo(){
         instrumentClusterScene->addItem(endRedTwo);
         isWhiteTwo = false;
         isRedTwo = true;
-    }else if(isRedTwo){
+    }
+    else if(isRedTwo){
         instrumentClusterScene->removeItem(dataTextTwoC);
         instrumentClusterScene->removeItem(dataTextTwoRed);
         instrumentClusterScene->removeItem(endRedTwo);
