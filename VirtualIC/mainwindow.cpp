@@ -13,6 +13,9 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     connect(timerTwo, SIGNAL(timeout()), this, SLOT(AnimateDataTwo()));
     timerTwo->start(1000);
 
+    timerThree = new QTimer();
+    connect(timerThree, SIGNAL(timeout()), this, SLOT(AnimateDataThree()));
+
     instrumentClusterScene = new QGraphicsScene();
     instrumentClusterScene->setSceneRect(0,0,1200,700);
     ui->graphicsView->setScene(instrumentClusterScene);
@@ -89,11 +92,43 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     endRedTwo = new EndRedTwo();
     endRedTwo->setPos(495,200);
 
+    dataTextThree = new DataTextThree();
+    dataTextThree->setPos(45,230);
+
+    dataTextThreeC = new DataTextThreeC();
+    dataTextThreeC->setPos(45,230);
+
+    dataTextThreeWhite = new DataTextThreeWhite();
+    dataTextThreeWhite->setPos(384,230);
+
+    dataTextThreeRed = new DataTextThreeRed();
+    dataTextThreeRed->setPos(384,230);
+
+    endRedThree = new EndRedThree();
+    endRedThree->setPos(463,230);
+
+    //Left Turn signal animation
+    leftBlinkerAnimation = new LeftBlinkerAnimation();
+    leftBlinkerAnimation->setPos(597,145);
+
+    //Left Turn signal animation
+    rightBlinkerAnimation = new RightBlinkerAnimation();
+    rightBlinkerAnimation->setPos(746,145);
+
+
     toggleOn = false;
+    toggleOnTwo = false;
+
     isWhite = true;
     isRed = false;
+
     isWhiteTwo = true;
     isRedTwo = false;
+
+    dataThreeActive = false;
+    isWhiteThree = false;
+    isRedThree = false;
+
     itemCount = nullptr;
 }
 
@@ -149,19 +184,78 @@ void MainWindow::AnimateDataTwo(){
     }
 }
 
+void MainWindow::AnimateDataThree(){
+
+    if(!dataThreeActive){
+        instrumentClusterScene->addItem(dataTextThree);
+        instrumentClusterScene->addItem(dataTextThreeWhite);
+        dataThreeActive = true;
+        isWhiteThree = true;
+    }
+    else if(isWhiteThree){
+        instrumentClusterScene->removeItem(dataTextThree);
+        instrumentClusterScene->removeItem(dataTextThreeWhite);
+        instrumentClusterScene->addItem(dataTextThreeC);
+        instrumentClusterScene->addItem(dataTextThreeRed);
+        instrumentClusterScene->addItem(endRedThree);
+        isWhiteThree = false;
+        isRedThree = true;
+    }
+    else if(isRedThree){
+        instrumentClusterScene->removeItem(dataTextThreeC);
+        instrumentClusterScene->removeItem(dataTextThreeRed);
+        instrumentClusterScene->removeItem(endRedThree);
+        instrumentClusterScene->addItem(dataTextThree);
+        instrumentClusterScene->addItem(dataTextThreeWhite);
+        isWhiteThree = true;
+        isRedThree = false;
+    }else{
+        return;
+    }
+}
+
 void MainWindow::on_On_Off_One_clicked(){
+
     toggleOn = !toggleOn;
+
     if (toggleOn){
-        turnSignal = new TurnSignal();
-        turnSignal->setPos(700,150);
-        instrumentClusterScene->addItem(turnSignal);
-    }else if(!toggleOn){
-delete turnSignal;
+        timerThree->start(500);
+        instrumentClusterScene->removeItem(lTurn);
+        instrumentClusterScene->addItem(leftBlinkerAnimation);
+    }
+    else if(!toggleOn){
+        timerThree->stop();
+        instrumentClusterScene->removeItem(leftBlinkerAnimation);
+        instrumentClusterScene->addItem(lTurn);
+        if(isWhiteThree){
+            instrumentClusterScene->removeItem(dataTextThree);
+            instrumentClusterScene->removeItem(dataTextThreeWhite);
+            dataThreeActive = false;
+            isRedThree = false;
+            isWhiteThree =false;
+        }
+        else if(isRedThree){
+            instrumentClusterScene->removeItem(dataTextThreeC);
+            instrumentClusterScene->removeItem(dataTextThreeRed);
+            instrumentClusterScene->removeItem(endRedThree);
+            dataThreeActive = false;
+            isRedThree = false;
+            isWhiteThree =false;
+        }
     }
 }
 
 void MainWindow::on_On_Off_Two_clicked(){
+    toggleOnTwo = !toggleOnTwo;
 
+    if (toggleOnTwo){
+    instrumentClusterScene->removeItem(rTurn);
+    instrumentClusterScene->addItem(rightBlinkerAnimation);
+    }
+    else if (!toggleOnTwo) {
+        instrumentClusterScene->removeItem(rightBlinkerAnimation);
+        instrumentClusterScene->addItem(rTurn);
+    }
 }
 
 void MainWindow::on_On_Off_Three_clicked(){

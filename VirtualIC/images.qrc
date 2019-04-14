@@ -11,5 +11,7 @@
         <file>images_root/high_beam.png</file>
         <file>images_root/coyote_crop.ico</file>
         <file>images_root/coyote_crop.png</file>
+        <file>images_root/Right_Blink_Animation.png</file>
+        <file>images_root/Left_Blink_Animation.png</file>
     </qresource>
 </RCC>

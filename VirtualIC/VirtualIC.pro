@@ -39,7 +39,14 @@ SOURCES += \
     endredone.cpp \
     endredtwo.cpp \
     infotext.cpp \
-    turnsignal.cpp
+    turnsignal.cpp \
+    datatextthree.cpp \
+    datatextthreec.cpp \
+    datatextthreewhite.cpp \
+    datatextthreered.cpp \
+    endredthree.cpp \
+    leftblinkeranimation.cpp \
+    rightblinkeranimation.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -55,7 +62,14 @@ HEADERS += \
     endredone.h \
     endredtwo.h \
     infotext.h \
-    turnsignal.h
+    turnsignal.h \
+    datatextthree.h \
+    datatextthreec.h \
+    datatextthreewhite.h \
+    datatextthreered.h \
+    endredthree.h \
+    leftblinkeranimation.h \
+    rightblinkeranimation.h
 
 FORMS += \
         mainwindow.ui
