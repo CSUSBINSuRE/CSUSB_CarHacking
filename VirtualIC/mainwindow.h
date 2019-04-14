@@ -25,6 +25,7 @@
 #include "endredthree.h"
 #include "leftblinkeranimation.h"
 #include "rightblinkeranimation.h"
+#include "speedanimation.h"
 
 namespace Ui {
 class MainWindow;
@@ -80,6 +81,7 @@ private:
 
     LeftBlinkerAnimation *leftBlinkerAnimation;
     RightBlinkerAnimation *rightBlinkerAnimation;
+    SpeedAnimation *speedAnimation;
 
 
     BackgroundItem *lTurn;
@@ -93,6 +95,7 @@ private:
 
     bool toggleOn;
     bool toggleOnTwo;
+    bool toggleOnThree;
 
     bool isRed;
     bool isWhite;

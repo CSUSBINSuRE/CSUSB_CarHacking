@@ -3,7 +3,7 @@
 
 RightBlinkerAnimation::RightBlinkerAnimation(QGraphicsItem *parent): QGraphicsItem(parent) ,currentFrame() {
 
-    //setFlag(ItemClipsToShape);
+    setFlag(ItemClipsToShape);
     iPixMap = QPixmap(":/images_root/Right_Blink_Animation.png");
 
     QTimer *timer = new QTimer(this);

@@ -46,7 +46,8 @@ SOURCES += \
     datatextthreered.cpp \
     endredthree.cpp \
     leftblinkeranimation.cpp \
-    rightblinkeranimation.cpp
+    rightblinkeranimation.cpp \
+    speedanimation.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -69,7 +70,8 @@ HEADERS += \
     datatextthreered.h \
     endredthree.h \
     leftblinkeranimation.h \
-    rightblinkeranimation.h
+    rightblinkeranimation.h \
+    speedanimation.h
 
 FORMS += \
         mainwindow.ui

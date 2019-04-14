@@ -35,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     instrumentClusterScene->addItem(engine);
 
     speed = new BackgroundItem(QPixmap(":images_root/speed.png"));
-    speed->setPos(1010, 130);
+    speed->setPos(1022,140);
     instrumentClusterScene->addItem(speed);
 
     hBeam = new BackgroundItem(QPixmap(":images_root/high_beam.png"));
@@ -115,9 +115,12 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     rightBlinkerAnimation = new RightBlinkerAnimation();
     rightBlinkerAnimation->setPos(746,145);
 
+    speedAnimation = new SpeedAnimation();
+    speedAnimation->setPos(1022,140);
 
     toggleOn = false;
     toggleOnTwo = false;
+    toggleOnThree = false;
 
     isWhite = true;
     isRed = false;
@@ -263,5 +266,14 @@ void MainWindow::on_On_Off_Three_clicked(){
 }
 
 void MainWindow::on_On_Off_Four_clicked(){
+    toggleOnThree = !toggleOnThree;
 
+    if (toggleOnThree){
+    instrumentClusterScene->removeItem(speed);
+    instrumentClusterScene->addItem(speedAnimation);
+    }
+    else if (!toggleOnThree) {
+        instrumentClusterScene->removeItem(speedAnimation);
+        instrumentClusterScene->addItem(speed);
+    }
 }

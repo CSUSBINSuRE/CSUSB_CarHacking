@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>images_root/engine.png</file>
-        <file>images_root/speed.png</file>
         <file>images_root/turn_left.png</file>
         <file>images_root/turn_right.png</file>
         <file>images_root/vic_ui_3.png</file>
@@ -13,5 +12,7 @@
         <file>images_root/coyote_crop.png</file>
         <file>images_root/Right_Blink_Animation.png</file>
         <file>images_root/Left_Blink_Animation.png</file>
+        <file>images_root/speed.png</file>
+        <file>images_root/speed_animation.png</file>
     </qresource>
 </RCC>
