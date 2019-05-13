@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QGraphicsScene>
+#include <QDebug>
+
+#include <QProcess>
 #include "turnsignal.h"
 #include "datatextone.h"
 #include "datatextonered.h"
@@ -17,6 +20,11 @@
 #include "datatexttwored.h"
 #include "datatexttwoc.h"
 #include "endredtwo.h"
+#include "datatextfour.h"
+#include "datatextfourc.h"
+#include "datatextfourwhite.h"
+#include "datatextfourred.h"
+#include "endredfour.h"
 
 #include "datatextthree.h"
 #include "datatextthreec.h"
@@ -26,6 +34,8 @@
 #include "leftblinkeranimation.h"
 #include "rightblinkeranimation.h"
 #include "speedanimation.h"
+#include "aboutvic.h"
+#include "datatextfive.h"
 
 namespace Ui {
 class MainWindow;
@@ -45,16 +55,24 @@ private slots:
     void AnimateDataOne();
     void AnimateDataTwo();
     void AnimateDataThree();
+    void AnimateDataFour();
+    void AnimateDataFive();
     void on_On_Off_One_clicked();
     void on_On_Off_Two_clicked();
     void on_On_Off_Three_clicked();
     void on_On_Off_Four_clicked();
+    void on_send_Button_clicked();
+    void on_actionVirtual_IC_triggered();
+
+    void on_actionTerminal_triggered();
 
 private:
     Ui::MainWindow *ui;
     QTimer *timerOne;
     QTimer *timerTwo;
     QTimer *timerThree;
+    QTimer *timerFour;
+    QTimer *timerFive;
 
     QGraphicsScene *instrumentClusterScene;
     QGraphicsScene *dataScene;
@@ -79,6 +97,14 @@ private:
     DataTextThreeRed *dataTextThreeRed;
     EndRedThree *endRedThree;
 
+    DataTextFour *dataTextFour;
+    DataTextFourC *dataTextFourC;
+    DataTextFourWhite *dataTextFourWhite;
+    DataTextFourRed *dataTextFourRed;
+    EndRedFour *endRedFour;
+
+    DataTextFive *dataTextFive;
+
     LeftBlinkerAnimation *leftBlinkerAnimation;
     RightBlinkerAnimation *rightBlinkerAnimation;
     SpeedAnimation *speedAnimation;
@@ -93,18 +119,30 @@ private:
     BackgroundItem *hBeam;
     BackgroundItem *abs;
 
+    AboutVIC *aboutVIC;
+
     bool toggleOn;
     bool toggleOnTwo;
     bool toggleOnThree;
+    bool toggleOnFour;
 
     bool isRed;
     bool isWhite;
+
     bool isRedTwo;
     bool isWhiteTwo;
+
     bool isWhiteThree;
     bool isRedThree;
+
+    bool isWhiteFour;
+    bool isRedFour;
+
     bool dataThreeActive;
-    int *itemCount;
+    bool dataFourActive;
+    bool dataFiveActive;
+
+    int itemCount;
 };
 
 #endif // MAINWINDOW_H

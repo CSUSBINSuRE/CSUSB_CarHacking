@@ -14,5 +14,6 @@
         <file>images_root/Left_Blink_Animation.png</file>
         <file>images_root/speed.png</file>
         <file>images_root/speed_animation.png</file>
+        <file>images_root/About_Dialog.png</file>
     </qresource>
 </RCC>

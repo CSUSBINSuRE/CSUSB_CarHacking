@@ -17,7 +17,10 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/images_root/vic_ui_3.png);</string>
+   <string notr="true">background-image: url(:/images_root/vic_ui_3.png);
+background-color: rgb(136, 138, 133);
+selection-background-color: rgb(85, 87, 83);
+color: rgb(255, 255, 255);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QGraphicsView" name="graphicsView">
@@ -28,6 +31,9 @@
       <width>1200</width>
       <height>700</height>
      </rect>
+    </property>
+    <property name="statusTip">
+     <string/>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color:transparent;</string>
@@ -164,6 +170,69 @@
      <string>ON/OFF</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>510</y>
+      <width>291</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>CAN Frame Data</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);
+selection-background-color: rgb(85, 87, 83);
+color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="send_Button">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>510</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Send</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>510</y>
+      <width>71</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Arbitration ID</string>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="accessibleDescription">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);
+selection-background-color: rgb(85, 87, 83);
+color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -174,7 +243,49 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionTerminal"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout_2">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionVirtual_IC"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionVersion"/>
+   </widget>
+   <addaction name="menuAbout"/>
+   <addaction name="menuAbout_2"/>
+   <addaction name="menuHelp"/>
   </widget>
+  <action name="actionVirtual_IC">
+   <property name="text">
+    <string>Virtual IC</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionVersion">
+   <property name="text">
+    <string>Version</string>
+   </property>
+  </action>
+  <action name="actionTerminal">
+   <property name="text">
+    <string>Terminal</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

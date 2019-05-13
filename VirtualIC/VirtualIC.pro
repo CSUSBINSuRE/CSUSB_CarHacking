@@ -5,6 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT += serialbus
+QT += serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -47,7 +49,14 @@ SOURCES += \
     endredthree.cpp \
     leftblinkeranimation.cpp \
     rightblinkeranimation.cpp \
-    speedanimation.cpp
+    speedanimation.cpp \
+    aboutvic.cpp \
+    datatextfour.cpp \
+    datatextfourc.cpp \
+    datatextfourwhite.cpp \
+    datatextfourred.cpp \
+    endredfour.cpp \
+    datatextfive.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -71,10 +80,18 @@ HEADERS += \
     endredthree.h \
     leftblinkeranimation.h \
     rightblinkeranimation.h \
-    speedanimation.h
+    speedanimation.h \
+    aboutvic.h \
+    datatextfour.h \
+    datatextfourc.h \
+    datatextfourwhite.h \
+    datatextfourred.h \
+    endredfour.h \
+    datatextfive.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    aboutvic.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

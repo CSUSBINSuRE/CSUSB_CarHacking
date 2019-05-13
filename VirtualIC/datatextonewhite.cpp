@@ -3,7 +3,7 @@
 DataTextOneWhite::DataTextOneWhite(QGraphicsItem *parent): QGraphicsTextItem(parent){
 
     setPlainText(QString("F4"));
-    setDefaultTextColor(Qt::white);
+    setDefaultTextColor(Qt::red);
     setFont(QFont("times",15));
 }
 
