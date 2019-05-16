@@ -1,5 +1,4 @@
 #include "rightblinkeranimation.h"
-#include <QPainter>
 
 RightBlinkerAnimation::RightBlinkerAnimation(QGraphicsItem *parent): QGraphicsItem(parent) ,currentFrame() {
 

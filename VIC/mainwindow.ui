@@ -17,7 +17,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/images_root/vic_ui_3.png);
+   <string notr="true">background-image: url(:/images/vic_ui_3.png);
 background-color: rgb(136, 138, 133);
 selection-background-color: rgb(85, 87, 83);
 color: rgb(255, 255, 255);</string>

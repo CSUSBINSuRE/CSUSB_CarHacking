@@ -1,5 +1,4 @@
 #include "leftblinkeranimation.h"
-#include <QPainter>
 
 LeftBlinkerAnimation::LeftBlinkerAnimation(QGraphicsItem *parent): QGraphicsItem(parent) ,currentFrame() {
 

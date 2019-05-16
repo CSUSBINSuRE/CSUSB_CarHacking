@@ -1,22 +1,17 @@
-/*
- * Author: Jonathan Baird
- * Date: January 2019
- * Email: 006228153@coyote.csusb.edu
- */
-
-#ifndef TURNSIGNAL_H
-#define TURNSIGNAL_H
+#ifndef LEFTBLINKERANIMATION_H
+#define LEFTBLINKERANIMATION_H
 #include <QGraphicsItem>
+#include <QPainter>
 #include <QPixmap>
 #include <QTimer>
 
-class TurnSignal : public QObject, public QGraphicsItem
+class LeftBlinkerAnimation : public QObject, public QGraphicsItem
 {
     Q_OBJECT
 
 public:
     enum { Type = UserType + 1};
-    TurnSignal(QGraphicsItem *parent = 0);
+    LeftBlinkerAnimation(QGraphicsItem *parent = nullptr);
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     int type() const;
@@ -29,5 +24,4 @@ private:
     QPixmap iPixMap;
 
 };
-
-#endif // TURNSIGNAL_H
+#endif // LEFTBLINKERANIMATION_H
