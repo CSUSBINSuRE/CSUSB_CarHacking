@@ -142,6 +142,18 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     dataTextFive = new DataText();
     dataTextFive->DataTextFive();
 
+    dataTextFiveC = new DataText();
+    dataTextFiveC->DataTextFiveC();
+
+    dataTextFiveWhite = new DataText();
+    dataTextFiveWhite->DataTextFiveWhite();
+
+    dataTextFiveRed = new DataText();
+    dataTextFiveRed->DataTextFiveRed();
+
+    endRedFive = new DataText();
+    endRedFive->EndRedFive();
+
     //Left Turn signal animation
     leftBlinkerAnimation = new LeftBlinkerAnimation();
     leftBlinkerAnimation->setPos(597,145);
@@ -168,13 +180,15 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     isWhiteThree = false;
     isRedThree = false;
 
-    itemCount = 0;
-
     dataFourActive = false;
-    isWhiteFour= true;
+    isWhiteFour= false;
     isRedFour = false;
 
     dataFiveActive = false;
+    isWhiteFive= false;
+    isRedFive = false;
+
+    itemCount = 0;
 }
 
 MainWindow::~MainWindow(){
@@ -232,78 +246,84 @@ void MainWindow::AnimateDataTwo(){
 void MainWindow::AnimateDataThree(){
 
     if(itemCount == 1){
-           dataTextThree->setPos(45,230);
-           dataTextThreeC->setPos(45,230);
-           dataTextThreeWhite->setPos(384,230);
-           dataTextThreeRed->setPos(384,230);
-           endRedThree->setPos(463,230);
+        dataTextThree->setPos(45,230);
+        dataTextThreeC->setPos(45,230);
+        dataTextThreeWhite->setPos(384,230);
+        dataTextThreeRed->setPos(384,230);
+        endRedThree->setPos(463,230);
 
-       }
-       else if(itemCount == 2 && dataFourActive){
-           dataTextFour->setPos(45,260);
-           dataTextFourC->setPos(45,260);
-           dataTextFourWhite->setPos(384,260);
-           dataTextFourRed->setPos(384,260);
-           endRedFour->setPos(463,260);
+    }
+    else if(itemCount == 2 && dataFourActive){
+        dataTextFour->setPos(45,260);
+        dataTextFourC->setPos(45,260);
+        dataTextFourWhite->setPos(384,260);
+        dataTextFourRed->setPos(384,260);
+        endRedFour->setPos(463,260);
 
-           dataTextThree->setPos(45,230);
-           dataTextThreeC->setPos(45,230);
-           dataTextThreeWhite->setPos(384,230);
-           dataTextThreeRed->setPos(384,230);
-           endRedThree->setPos(463,230);
-       }
-       else if(itemCount == 2 && dataFiveActive){
-           dataTextFive->setPos(45,260);
+        dataTextThree->setPos(45,230);
+        dataTextThreeC->setPos(45,230);
+        dataTextThreeWhite->setPos(384,230);
+        dataTextThreeRed->setPos(384,230);
+        endRedThree->setPos(463,230);
+    }
+    else if(itemCount == 2 && dataFiveActive){
+        dataTextFive->setPos(45,260);
+        dataTextFiveC->setPos(45,260);
+        dataTextFiveWhite->setPos(258,260);
+        dataTextFiveRed->setPos(258,260);
+        endRedFive->setPos(463,260);
 
-           dataTextThree->setPos(45,230);
-           dataTextThreeC->setPos(45,230);
-           dataTextThreeWhite->setPos(384,230);
-           dataTextThreeRed->setPos(384,230);
-           endRedThree->setPos(463,230);
+        dataTextThree->setPos(45,230);
+        dataTextThreeC->setPos(45,230);
+        dataTextThreeWhite->setPos(384,230);
+        dataTextThreeRed->setPos(384,230);
+        endRedThree->setPos(463,230);
+    }
+    else if(itemCount == 3 && dataFourActive && dataFiveActive){
+        dataTextFour->setPos(45,260);
+        dataTextFourC->setPos(45,260);
+        dataTextFourWhite->setPos(384,260);
+        dataTextFourRed->setPos(384,260);
+        endRedFour->setPos(463,260);
 
-       }
-       else if(itemCount == 3 && dataFourActive && dataFiveActive){
-           dataTextFour->setPos(45,260);
-           dataTextFourC->setPos(45,260);
-           dataTextFourWhite->setPos(384,260);
-           dataTextFourRed->setPos(384,260);
-           endRedFour->setPos(463,260);
+        dataTextFive->setPos(45,290);
+        dataTextFiveC->setPos(45,290);
+        dataTextFiveWhite->setPos(258,290);
+        dataTextFiveRed->setPos(258,290);
+        endRedFive->setPos(463,290);
 
-            dataTextFive->setPos(45,290);
-
-            dataTextThree->setPos(45,230);
-            dataTextThreeC->setPos(45,230);
-            dataTextThreeWhite->setPos(384,230);
-            dataTextThreeRed->setPos(384,230);
-            endRedThree->setPos(463,230);
-       }
-
-       if(!dataThreeActive){
-           instrumentClusterScene->addItem(dataTextThree);
-           instrumentClusterScene->addItem(dataTextThreeWhite);
-           dataThreeActive = true;
-           isWhiteThree = true;
-       }
-       else if(isWhiteThree){
-           instrumentClusterScene->removeItem(dataTextThree);
-           instrumentClusterScene->removeItem(dataTextThreeWhite);
-           instrumentClusterScene->addItem(dataTextThreeC);
-           instrumentClusterScene->addItem(dataTextThreeRed);
-           instrumentClusterScene->addItem(endRedThree);
-           isWhiteThree = false;
-           isRedThree = true;
-       }
-       else if(isRedThree){
-           instrumentClusterScene->removeItem(dataTextThreeC);
-           instrumentClusterScene->removeItem(dataTextThreeRed);
-           instrumentClusterScene->removeItem(endRedThree);
-           instrumentClusterScene->addItem(dataTextThree);
-           instrumentClusterScene->addItem(dataTextThreeWhite);
-           isWhiteThree = true;
-           isRedThree = false;
-       }else{
-           return;
-       }
+        dataTextThree->setPos(45,230);
+        dataTextThreeC->setPos(45,230);
+        dataTextThreeWhite->setPos(384,230);
+        dataTextThreeRed->setPos(384,230);
+        endRedThree->setPos(463,230);
+    }
+    if(!dataThreeActive){
+        instrumentClusterScene->addItem(dataTextThree);
+        instrumentClusterScene->addItem(dataTextThreeWhite);
+        dataThreeActive = true;
+        isWhiteThree = true;
+    }
+    else if(isWhiteThree){
+        instrumentClusterScene->removeItem(dataTextThree);
+        instrumentClusterScene->removeItem(dataTextThreeWhite);
+        instrumentClusterScene->addItem(dataTextThreeC);
+        instrumentClusterScene->addItem(dataTextThreeRed);
+        instrumentClusterScene->addItem(endRedThree);
+        isWhiteThree = false;
+        isRedThree = true;
+    }
+    else if(isRedThree){
+        instrumentClusterScene->removeItem(dataTextThreeC);
+        instrumentClusterScene->removeItem(dataTextThreeRed);
+        instrumentClusterScene->removeItem(endRedThree);
+        instrumentClusterScene->addItem(dataTextThree);
+        instrumentClusterScene->addItem(dataTextThreeWhite);
+        isWhiteThree = true;
+        isRedThree = false;
+    }else{
+        return;
+    }
 }
 
 void MainWindow::AnimateDataFour(){
@@ -324,6 +344,10 @@ void MainWindow::AnimateDataFour(){
     }
     else if(itemCount == 2 && dataFiveActive){
         dataTextFive->setPos(45,260);
+        dataTextFiveC->setPos(45,260);
+        dataTextFiveWhite->setPos(258,260);
+        dataTextFiveRed->setPos(258,260);
+        endRedFive->setPos(463,260);
 
         dataTextFour->setPos(45,230);
         dataTextFourC->setPos(45,230);
@@ -334,6 +358,10 @@ void MainWindow::AnimateDataFour(){
     else if(itemCount == 3 && dataThreeActive && dataFiveActive){
 
         dataTextFive->setPos(45,290);
+        dataTextFiveC->setPos(45,290);
+        dataTextFiveWhite->setPos(258,290);
+        dataTextFiveRed->setPos(258,290);
+        endRedFive->setPos(463,290);
 
         dataTextFour->setPos(45,260);
         dataTextFourC->setPos(45,260);
@@ -380,32 +408,58 @@ void MainWindow::AnimateDataFive(){
 
     if(itemCount == 1){
         dataTextFive->setPos(45,230);
-
+        dataTextFiveC->setPos(45,230);
+        dataTextFiveWhite->setPos(258,230);
+        dataTextFiveRed->setPos(258,230);
+        endRedFive->setPos(463,230);
     }
     else if(itemCount == 2 && dataThreeActive){
-
         dataTextFive->setPos(45,260);
+        dataTextFiveC->setPos(45,260);
+        dataTextFiveWhite->setPos(258,260);
+        dataTextFiveRed->setPos(258,260);
+        endRedFive->setPos(463,260);
 
     }
-    else if(itemCount == 2 && dataFourActive){
+    else if(itemCount == 2 && dataFourActive){  
         dataTextFive->setPos(45,260);
-
-        dataTextFour->setPos(45,230);
-        dataTextFourC->setPos(45,230);
-        dataTextFourWhite->setPos(384,230);
-        dataTextFourRed->setPos(384,230);
-        endRedFour->setPos(463,230);
+        dataTextFiveC->setPos(45,260);
+        dataTextFiveWhite->setPos(258,260);
+        dataTextFiveRed->setPos(258,260);
+        endRedFive->setPos(463,260);
     }
     else if(itemCount == 3 && dataThreeActive && dataFourActive){
         dataTextFive->setPos(45,290);
-
+        dataTextFiveC->setPos(45,290);
+        dataTextFiveWhite->setPos(258,290);
+        dataTextFiveRed->setPos(258,290);
+        endRedFive->setPos(463,290);
     }
 
     if(!dataFiveActive){
         instrumentClusterScene->addItem(dataTextFive);
+        instrumentClusterScene->addItem(dataTextFiveWhite);
         dataFiveActive = true;
+        isWhiteFive = true;
     }
-    else{
+    else if(isWhiteFive){
+        instrumentClusterScene->removeItem(dataTextFive);
+        instrumentClusterScene->removeItem(dataTextFiveWhite);
+        instrumentClusterScene->addItem(dataTextFiveC);
+        instrumentClusterScene->addItem(dataTextFiveRed);
+        instrumentClusterScene->addItem(endRedFive);
+        isWhiteFive = false;
+        isRedFive= true;
+    }
+    else if(isRedFive){
+        instrumentClusterScene->removeItem(dataTextFiveC);
+        instrumentClusterScene->removeItem(dataTextFiveRed);
+        instrumentClusterScene->removeItem(endRedFive);
+        instrumentClusterScene->addItem(dataTextFive);
+        instrumentClusterScene->addItem(dataTextFiveWhite);
+        isWhiteFive = true;
+        isRedFive = false;
+    }else{
         return;
     }
 }
@@ -474,8 +528,22 @@ void MainWindow::on_On_Off_Three_clicked(){
         timerFive->stop();
         itemCount--;
          qDebug()<< itemCount;
-         instrumentClusterScene->removeItem(dataTextFive);
-         dataFiveActive = false;
+
+         if(isWhiteFive){
+             instrumentClusterScene->removeItem(dataTextFive);
+             instrumentClusterScene->removeItem(dataTextFiveWhite);
+             dataFiveActive = false;
+             isRedFive = false;
+             isWhiteFive =false;
+         }
+         else if(isRedFive){
+             instrumentClusterScene->removeItem(dataTextFiveC);
+             instrumentClusterScene->removeItem(dataTextFiveRed);
+             instrumentClusterScene->removeItem(endRedFive);
+             dataFiveActive = false;
+             isRedFive = false;
+             isWhiteFive =false;
+         }
     }
 }
 
@@ -527,4 +595,19 @@ void MainWindow::on_send_Button_clicked(){
     if(canFrameData == dataTextFour && dataTextFourArbId == ArbitrationId){
         on_On_Off_Four_clicked();
     }
+}
+
+void MainWindow::on_actionVirtual_IC_triggered(){
+
+    aboutVic = new AboutVIC();
+    aboutVic->show();
+}
+
+void MainWindow::on_actionTerminal_triggered(){
+
+    QProcess *openTerminal = new QProcess();
+    QString programPath = "/usr/bin/gnome-terminal";
+    QStringList arguments;
+    arguments << "--working-directory=/Home";
+    openTerminal->start(programPath,arguments);
 }

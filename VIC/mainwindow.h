@@ -12,6 +12,8 @@
 #include "rightblinkeranimation.h"
 #include "speedanimation.h"
 #include "backgrounditem.h"
+#include "aboutvic.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -37,6 +39,10 @@ private slots:
     void on_On_Off_Four_clicked();
     void on_On_Off_Three_clicked();
     void on_send_Button_clicked();
+
+    void on_actionVirtual_IC_triggered();
+
+    void on_actionTerminal_triggered();
 
 private:
     Ui::MainWindow *ui;
@@ -94,6 +100,9 @@ private:
     BackgroundItem *hBeam;
     BackgroundItem *abs;
 
+    AboutVIC *aboutVic;
+
+
     bool isWhite;
     bool isRed;
 
@@ -105,6 +114,9 @@ private:
 
     bool isWhiteFour;
     bool isRedFour;
+
+    bool isWhiteFive;
+    bool isRedFive;
 
     bool toggleOn;
     bool toggleOnTwo;

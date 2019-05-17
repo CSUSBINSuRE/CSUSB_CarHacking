@@ -113,7 +113,7 @@ void DataText::EndRedThree(){
 
 void DataText::DataTextFour(){
 
-    setPlainText(QString("0.978841     215     AB FG HE XA YB FS      FF      ....#..."));
+    setPlainText(QString("0.978841     215     AB FG HE XA YB FS      FF      ....!..."));
     setDefaultTextColor(Qt::white);
     setFont(QFont("times",15));
 }
@@ -141,32 +141,44 @@ void DataText::DataTextFourRed(){
 
 void DataText::EndRedFour(){
 
-    setPlainText(QString(" #    , "));
+    setPlainText(QString(" *    , "));
     setDefaultTextColor(Qt::red);
     setFont(QFont("times",15));
 }
 
 void DataText::DataTextFive(){
 
-    setPlainText(QString("0.231765    212     AB FG    XA YB FS ER FF      ....#..."));
+    setPlainText(QString("0.231765     212    AB FG       XA YB FS ER FF      ....#..."));
     setDefaultTextColor(Qt::white);
     setFont(QFont("times",15));
 }
 
 void DataText::DataTextFiveC(){
 
+    setPlainText(QString("0.183387     212    AB FG       XA YB FS ER FF      .  .... ."));
+    setDefaultTextColor(Qt::white);
+    setFont(QFont("times",15));
 }
 
-void DataText::DataTextFiverWhite(){
+void DataText::DataTextFiveWhite(){
+
+    setPlainText(QString("X3"));
+    setDefaultTextColor(Qt::red);
+    setFont(QFont("times",15));
 
 }
 
 void DataText::DataTextFiveRed(){
-
+    setPlainText(QString("X8"));
+    setDefaultTextColor(Qt::red);
+    setFont(QFont("times",15));
 }
 
 void DataText::EndRedFive(){
 
+    setPlainText(QString(" $    , "));
+    setDefaultTextColor(Qt::red);
+    setFont(QFont("times",15));
 }
 
 void DataText::InfoText(){

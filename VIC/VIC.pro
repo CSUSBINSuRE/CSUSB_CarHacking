@@ -31,7 +31,8 @@ SOURCES += \
     leftblinkeranimation.cpp \
     rightblinkeranimation.cpp \
     backgrounditem.cpp \
-    speedanimation.cpp
+    speedanimation.cpp \
+    aboutvic.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -39,10 +40,12 @@ HEADERS += \
     leftblinkeranimation.h \
     rightblinkeranimation.h \
     backgrounditem.h \
-    speedanimation.h
+    speedanimation.h \
+    aboutvic.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    aboutvic.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

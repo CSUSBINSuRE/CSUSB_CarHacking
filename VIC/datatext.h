@@ -34,7 +34,7 @@ public:
 
     void DataTextFive();
     void DataTextFiveC();
-    void DataTextFiverWhite();
+    void DataTextFiveWhite();
     void DataTextFiveRed();
     void EndRedFive();
 
