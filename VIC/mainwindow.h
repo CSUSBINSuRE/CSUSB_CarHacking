@@ -10,6 +10,7 @@
 #include "datatext.h"
 #include "leftblinkeranimation.h"
 #include "rightblinkeranimation.h"
+#include "speedanimation.h"
 #include "backgrounditem.h"
 
 namespace Ui {
@@ -32,6 +33,10 @@ private slots:
     void AnimateDataFive();
 
     void on_On_Off_One_clicked();
+    void on_On_Off_Two_clicked();
+    void on_On_Off_Four_clicked();
+    void on_On_Off_Three_clicked();
+    void on_send_Button_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -56,8 +61,29 @@ private:
     DataText *dataTextTwoRed;
     DataText *endRedTwo;
 
+    DataText *dataTextThree;
+    DataText *dataTextThreeC;
+    DataText *dataTextThreeWhite;
+    DataText *dataTextThreeRed;
+    DataText *endRedThree;
+
+    DataText *dataTextFour;
+    DataText *dataTextFourC;
+    DataText *dataTextFourWhite;
+    DataText *dataTextFourRed;
+    DataText *endRedFour;
+
+    DataText *dataTextFive;
+    DataText *dataTextFiveC;
+    DataText *dataTextFiveWhite;
+    DataText *dataTextFiveRed;
+    DataText *endRedFive;
+
+    DataText *infoText;
+
     LeftBlinkerAnimation *leftBlinkerAnimation;
     RightBlinkerAnimation *rightBlinkerAnimation;
+    SpeedAnimation *speedAnimation;
 
     BackgroundItem *lTurn;
     BackgroundItem *rTurn;

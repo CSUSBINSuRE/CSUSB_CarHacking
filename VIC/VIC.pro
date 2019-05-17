@@ -30,14 +30,16 @@ SOURCES += \
     datatext.cpp \
     leftblinkeranimation.cpp \
     rightblinkeranimation.cpp \
-    backgrounditem.cpp
+    backgrounditem.cpp \
+    speedanimation.cpp
 
 HEADERS += \
         mainwindow.h \
     datatext.h \
     leftblinkeranimation.h \
     rightblinkeranimation.h \
-    backgrounditem.h
+    backgrounditem.h \
+    speedanimation.h
 
 FORMS += \
         mainwindow.ui

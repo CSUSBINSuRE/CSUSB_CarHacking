@@ -3,7 +3,7 @@
 LeftBlinkerAnimation::LeftBlinkerAnimation(QGraphicsItem *parent): QGraphicsItem(parent) ,currentFrame() {
 
     setFlag(ItemClipsToShape);
-    iPixMap = QPixmap(":/images_root/Left_Blink_Animation.png");
+    iPixMap = QPixmap(":/images/Left_Blink_Animation.png");
 
     QTimer *timer = new QTimer(this);
     timer = new QTimer(this);

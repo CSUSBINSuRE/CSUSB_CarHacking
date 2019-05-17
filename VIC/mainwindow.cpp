@@ -60,6 +60,11 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     tcontrol->setPos(870,135);
     instrumentClusterScene->addItem(tcontrol);
 
+    infoText = new DataText();
+    infoText->InfoText();
+    infoText->setPos(43,145);
+    instrumentClusterScene->addItem(infoText);
+
     dataTextOne = new DataText();
     dataTextOne->DataTextOne();
     dataTextOne->setPos(45,170);
@@ -104,6 +109,39 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     endRedTwo->EndRedTwo();
     endRedTwo->setPos(495,200);
 
+    dataTextThree = new DataText();
+    dataTextThree->DataTextThree();
+
+    dataTextThreeC = new DataText();
+    dataTextThreeC->DataTextThreeC();
+
+    dataTextThreeWhite = new DataText();
+    dataTextThreeWhite->DataTextThreeWhite();
+
+    dataTextThreeRed = new DataText();
+    dataTextThreeRed->DataTextThreeRed();
+
+    endRedThree = new DataText();
+    endRedThree->EndRedThree();
+
+    dataTextFour = new DataText();
+    dataTextFour->DataTextFour();
+
+    dataTextFourC = new DataText();
+    dataTextFourC->DataTextFourC();
+
+    dataTextFourWhite = new DataText();
+    dataTextFourWhite->DataTextFourWhite();
+
+    dataTextFourRed = new DataText();
+    dataTextFourRed->DataTextFourRed();
+
+    endRedFour = new DataText();
+    endRedFour->EndRedFour();
+
+    dataTextFive = new DataText();
+    dataTextFive->DataTextFive();
+
     //Left Turn signal animation
     leftBlinkerAnimation = new LeftBlinkerAnimation();
     leftBlinkerAnimation->setPos(597,145);
@@ -111,6 +149,9 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     //Left Turn signal animation
     rightBlinkerAnimation = new RightBlinkerAnimation();
     rightBlinkerAnimation->setPos(746,145);
+
+    speedAnimation = new SpeedAnimation();
+    speedAnimation->setPos(1022,140);
 
     toggleOn = false;
     toggleOnTwo = false;
@@ -190,18 +231,189 @@ void MainWindow::AnimateDataTwo(){
 
 void MainWindow::AnimateDataThree(){
 
+    if(itemCount == 1){
+           dataTextThree->setPos(45,230);
+           dataTextThreeC->setPos(45,230);
+           dataTextThreeWhite->setPos(384,230);
+           dataTextThreeRed->setPos(384,230);
+           endRedThree->setPos(463,230);
+
+       }
+       else if(itemCount == 2 && dataFourActive){
+           dataTextFour->setPos(45,260);
+           dataTextFourC->setPos(45,260);
+           dataTextFourWhite->setPos(384,260);
+           dataTextFourRed->setPos(384,260);
+           endRedFour->setPos(463,260);
+
+           dataTextThree->setPos(45,230);
+           dataTextThreeC->setPos(45,230);
+           dataTextThreeWhite->setPos(384,230);
+           dataTextThreeRed->setPos(384,230);
+           endRedThree->setPos(463,230);
+       }
+       else if(itemCount == 2 && dataFiveActive){
+           dataTextFive->setPos(45,260);
+
+           dataTextThree->setPos(45,230);
+           dataTextThreeC->setPos(45,230);
+           dataTextThreeWhite->setPos(384,230);
+           dataTextThreeRed->setPos(384,230);
+           endRedThree->setPos(463,230);
+
+       }
+       else if(itemCount == 3 && dataFourActive && dataFiveActive){
+           dataTextFour->setPos(45,260);
+           dataTextFourC->setPos(45,260);
+           dataTextFourWhite->setPos(384,260);
+           dataTextFourRed->setPos(384,260);
+           endRedFour->setPos(463,260);
+
+            dataTextFive->setPos(45,290);
+
+            dataTextThree->setPos(45,230);
+            dataTextThreeC->setPos(45,230);
+            dataTextThreeWhite->setPos(384,230);
+            dataTextThreeRed->setPos(384,230);
+            endRedThree->setPos(463,230);
+       }
+
+       if(!dataThreeActive){
+           instrumentClusterScene->addItem(dataTextThree);
+           instrumentClusterScene->addItem(dataTextThreeWhite);
+           dataThreeActive = true;
+           isWhiteThree = true;
+       }
+       else if(isWhiteThree){
+           instrumentClusterScene->removeItem(dataTextThree);
+           instrumentClusterScene->removeItem(dataTextThreeWhite);
+           instrumentClusterScene->addItem(dataTextThreeC);
+           instrumentClusterScene->addItem(dataTextThreeRed);
+           instrumentClusterScene->addItem(endRedThree);
+           isWhiteThree = false;
+           isRedThree = true;
+       }
+       else if(isRedThree){
+           instrumentClusterScene->removeItem(dataTextThreeC);
+           instrumentClusterScene->removeItem(dataTextThreeRed);
+           instrumentClusterScene->removeItem(endRedThree);
+           instrumentClusterScene->addItem(dataTextThree);
+           instrumentClusterScene->addItem(dataTextThreeWhite);
+           isWhiteThree = true;
+           isRedThree = false;
+       }else{
+           return;
+       }
 }
 
 void MainWindow::AnimateDataFour(){
 
+    if(itemCount == 1){
+        dataTextFour->setPos(45,230);
+        dataTextFourC->setPos(45,230);
+        dataTextFourWhite->setPos(384,230);
+        dataTextFourRed->setPos(384,230);
+        endRedFour->setPos(463,230);
+    }
+    else if(itemCount == 2 && dataThreeActive){
+        dataTextFour->setPos(45,260);
+        dataTextFourC->setPos(45,260);
+        dataTextFourWhite->setPos(384,260);
+        dataTextFourRed->setPos(384,260);
+        endRedFour->setPos(463,260);
+    }
+    else if(itemCount == 2 && dataFiveActive){
+        dataTextFive->setPos(45,260);
+
+        dataTextFour->setPos(45,230);
+        dataTextFourC->setPos(45,230);
+        dataTextFourWhite->setPos(384,230);
+        dataTextFourRed->setPos(384,230);
+        endRedFour->setPos(463,230);
+    }
+    else if(itemCount == 3 && dataThreeActive && dataFiveActive){
+
+        dataTextFive->setPos(45,290);
+
+        dataTextFour->setPos(45,260);
+        dataTextFourC->setPos(45,260);
+        dataTextFourWhite->setPos(384,260);
+        dataTextFourRed->setPos(384,260);
+        endRedFour->setPos(463,260);
+
+        dataTextThree->setPos(45,230);
+        dataTextThreeC->setPos(45,230);
+        dataTextThreeWhite->setPos(384,230);
+        dataTextThreeRed->setPos(384,230);
+        endRedThree->setPos(463,230);
+    }
+
+    if(!dataFourActive){
+        instrumentClusterScene->addItem(dataTextFour);
+        instrumentClusterScene->addItem(dataTextFourWhite);
+        dataFourActive = true;
+        isWhiteFour = true;
+    }
+    else if(isWhiteFour){
+        instrumentClusterScene->removeItem(dataTextFour);
+        instrumentClusterScene->removeItem(dataTextFourWhite);
+        instrumentClusterScene->addItem(dataTextFourC);
+        instrumentClusterScene->addItem(dataTextFourRed);
+        instrumentClusterScene->addItem(endRedFour);
+        isWhiteFour = false;
+        isRedFour = true;
+    }
+    else if(isRedFour){
+        instrumentClusterScene->removeItem(dataTextFourC);
+        instrumentClusterScene->removeItem(dataTextFourRed);
+        instrumentClusterScene->removeItem(endRedFour);
+        instrumentClusterScene->addItem(dataTextFour);
+        instrumentClusterScene->addItem(dataTextFourWhite);
+        isWhiteFour = true;
+        isRedFour = false;
+    }else{
+        return;
+    }
 }
 
 void MainWindow::AnimateDataFive(){
 
+    if(itemCount == 1){
+        dataTextFive->setPos(45,230);
+
+    }
+    else if(itemCount == 2 && dataThreeActive){
+
+        dataTextFive->setPos(45,260);
+
+    }
+    else if(itemCount == 2 && dataFourActive){
+        dataTextFive->setPos(45,260);
+
+        dataTextFour->setPos(45,230);
+        dataTextFourC->setPos(45,230);
+        dataTextFourWhite->setPos(384,230);
+        dataTextFourRed->setPos(384,230);
+        endRedFour->setPos(463,230);
+    }
+    else if(itemCount == 3 && dataThreeActive && dataFourActive){
+        dataTextFive->setPos(45,290);
+
+    }
+
+    if(!dataFiveActive){
+        instrumentClusterScene->addItem(dataTextFive);
+        dataFiveActive = true;
+    }
+    else{
+        return;
+    }
 }
 
 void MainWindow::on_On_Off_One_clicked(){
-/*
+
+    toggleOn = !toggleOn;
+
     if (toggleOn){
         itemCount++;
         timerThree->start(500);
@@ -232,5 +444,87 @@ void MainWindow::on_On_Off_One_clicked(){
             isWhiteThree =false;
         }
     }
-    */
+}
+
+void MainWindow::on_On_Off_Two_clicked(){
+
+    toggleOnTwo = !toggleOnTwo;
+
+    if (toggleOnTwo){
+    instrumentClusterScene->removeItem(rTurn);
+    instrumentClusterScene->addItem(rightBlinkerAnimation);
+    }
+    else if (!toggleOnTwo){
+        instrumentClusterScene->removeItem(rightBlinkerAnimation);
+        instrumentClusterScene->addItem(rTurn);
+    }
+}
+
+void MainWindow::on_On_Off_Three_clicked(){
+
+    toggleOnThree = !toggleOnThree;
+
+    if (toggleOnThree){
+        itemCount++;
+        timerFive->start(800);
+         qDebug()<< itemCount;
+
+    }
+    else if (!toggleOnThree){
+        timerFive->stop();
+        itemCount--;
+         qDebug()<< itemCount;
+         instrumentClusterScene->removeItem(dataTextFive);
+         dataFiveActive = false;
+    }
+}
+
+void MainWindow::on_On_Off_Four_clicked(){
+
+    toggleOnFour = !toggleOnFour;
+
+    if (toggleOnFour){
+
+        itemCount++;
+        timerFour->start(700);
+
+        qDebug()<< itemCount;
+        instrumentClusterScene->removeItem(speed);
+        instrumentClusterScene->addItem(speedAnimation);
+    }
+    else if(!toggleOnFour){
+        timerFour->stop();
+        itemCount--;
+        qDebug()<< itemCount;
+        instrumentClusterScene->removeItem(speedAnimation);
+        instrumentClusterScene->addItem(speed);
+
+        if(isWhiteFour){
+            instrumentClusterScene->removeItem(dataTextFour);
+            instrumentClusterScene->removeItem(dataTextFourWhite);
+            dataFourActive = false;
+            isRedFour = false;
+            isWhiteFour =false;
+        }
+        else if(isRedFour){
+            instrumentClusterScene->removeItem(dataTextFourC);
+            instrumentClusterScene->removeItem(dataTextFourRed);
+            instrumentClusterScene->removeItem(endRedFour);
+            dataFourActive = false;
+            isRedFour = false;
+            isWhiteFour =false;
+        }
+    }
+}
+
+void MainWindow::on_send_Button_clicked(){
+
+    QString canFrameData = ui->lineEdit->text();
+    QString ArbitrationId = ui->lineEdit_2->text();
+    QString dataTextFour = "AB FG HE XA YB FS F4 FF";
+    QString dataTextFourArbId = "215";
+
+    if(canFrameData == dataTextFour && dataTextFourArbId == ArbitrationId){
+        on_On_Off_Four_clicked();
+    }
 }

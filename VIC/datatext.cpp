@@ -76,5 +76,105 @@ void DataText::EndRedTwo(){
     setFont(QFont("times",15));
 }
 
+void DataText::DataTextThree(){
+
+    setPlainText(QString("0.978841     215     BB FG HE XA YB FS      FF      ....#..."));
+    setDefaultTextColor(Qt::white);
+    setFont(QFont("times",15));
+}
+
+void DataText::DataTextThreeC(){
+
+    setPlainText(QString("0.889952     215     BB FG HE XA YB FS      FF      .  .... ."));
+    setDefaultTextColor(Qt::white);
+    setFont(QFont("times",15));
+}
+
+void DataText::DataTextThreeWhite(){
+
+    setPlainText(QString("D6"));
+    setDefaultTextColor(Qt::white);
+    setFont(QFont("times",15));
+}
+
+void DataText::DataTextThreeRed(){
+
+    setPlainText(QString("D7"));
+    setDefaultTextColor(Qt::red);
+    setFont(QFont("times",15));
+}
+
+void DataText::EndRedThree(){
+
+    setPlainText(QString(" #    , "));
+    setDefaultTextColor(Qt::red);
+    setFont(QFont("times",15));
+}
+
+void DataText::DataTextFour(){
+
+    setPlainText(QString("0.978841     215     AB FG HE XA YB FS      FF      ....#..."));
+    setDefaultTextColor(Qt::white);
+    setFont(QFont("times",15));
+}
+
+void DataText::DataTextFourC(){
+
+    setPlainText(QString("0.889952     215     AB FG HE XA YB FS      FF      .  .... ."));
+    setDefaultTextColor(Qt::white);
+    setFont(QFont("times",15));
+}
+
+void DataText::DataTextFourWhite(){
+
+    setPlainText(QString("F4"));
+    setDefaultTextColor(Qt::red);
+    setFont(QFont("times",15));
+}
+
+void DataText::DataTextFourRed(){
+
+    setPlainText(QString("X7"));
+    setDefaultTextColor(Qt::red);
+    setFont(QFont("times",15));
+}
+
+void DataText::EndRedFour(){
+
+    setPlainText(QString(" #    , "));
+    setDefaultTextColor(Qt::red);
+    setFont(QFont("times",15));
+}
+
+void DataText::DataTextFive(){
+
+    setPlainText(QString("0.231765    212     AB FG    XA YB FS ER FF      ....#..."));
+    setDefaultTextColor(Qt::white);
+    setFont(QFont("times",15));
+}
+
+void DataText::DataTextFiveC(){
+
+}
+
+void DataText::DataTextFiverWhite(){
+
+}
+
+void DataText::DataTextFiveRed(){
+
+}
+
+void DataText::EndRedFive(){
+
+}
+
+void DataText::InfoText(){
+
+    setPlainText(QString("    Delta         ID                         Data"));
+    setDefaultTextColor(Qt::white);
+    setFont(QFont("times",15));
+}
+
 
 

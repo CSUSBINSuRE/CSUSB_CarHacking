@@ -20,6 +20,26 @@ public:
     void DataTextTwoRed();
     void EndRedTwo();
 
+    void DataTextThree();
+    void DataTextThreeC();
+    void DataTextThreeWhite();
+    void DataTextThreeRed();
+    void EndRedThree();
+
+    void DataTextFour();
+    void DataTextFourC();
+    void DataTextFourWhite();
+    void DataTextFourRed();
+    void EndRedFour();
+
+    void DataTextFive();
+    void DataTextFiveC();
+    void DataTextFiverWhite();
+    void DataTextFiveRed();
+    void EndRedFive();
+
+    void InfoText();
+
 public slots:
 
 
