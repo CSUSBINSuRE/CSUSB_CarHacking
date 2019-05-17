@@ -118,5 +118,5 @@ Repository for creating CSUSB's Car Hacking and V2V environment distribution
 	* If you ever find the device booting into the FX3 bootloader (e.g., if you unplug the device in the middle of a firmware upgrade), see the recovery command in bladeRF-cli for additional details.
 9. See the overview of the bladeRF-cli for more information about loading the FPGA and using the command line interface tool
 
-##Virtual Instrument Cluster 
+## Virtual Instrument Cluster 
 ![VIC](https://user-images.githubusercontent.com/22214754/57908997-659f0c00-7836-11e9-82f3-ca4224a444da.png)
